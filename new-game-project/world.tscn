@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://ckavqb25bdaul"]
 
-[ext_resource type="PackedScene" uid="uid://ctb8n71p3vtsn" path="res://bob.tscn" id="2_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://8s4mrtj4ivh7" path="res://assets/PNG/Battleground2/Pale/Battleground2.png" id="2_tlwt5"]
 [ext_resource type="Texture2D" uid="uid://bpfq6k6ivchc7" path="res://assets/PNG/Battleground2/Pale/dragon.png" id="3_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://dlem5w3yeg1el" path="res://assets/PNG/Battleground2/Pale/floor.png" id="4_aqk2v"]
@@ -10,15 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://bjb6apor8hnam" path="res://assets/PNG/Battleground1/Pale/hills&trees.png" id="7_pkg7o"]
 [ext_resource type="Texture2D" uid="uid://3sglt5w4eiwk" path="res://assets/PNG/Battleground1/Pale/statue.png" id="8_gbfbk"]
 [ext_resource type="Texture2D" uid="uid://bxbd6hoh8027w" path="res://assets/PNG/Battleground2/Bright/wall@windows.png" id="10_wse8f"]
-[ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="11_ic0uy"]
 [ext_resource type="PackedScene" uid="uid://oyfhf36nut5n" path="res://game_ui.tscn" id="12_k3n1d"]
 [ext_resource type="PackedScene" uid="uid://ccnmi66mjt2co" path="res://dagger_pickup.tscn" id="14_70uel"]
-[ext_resource type="PackedScene" uid="uid://2oqfqxx5b61g" path="res://enemy.tscn" id="16_2u3nc"]
 [ext_resource type="Texture2D" uid="uid://bcgv5skllckw2" path="res://assets/PNG/Battleground2/Bright/Battleground2.png" id="17_udxuc"]
 [ext_resource type="Texture2D" uid="uid://bku2xvgtorgmj" path="res://assets/PNG/Battleground2/Bright/floor.png" id="18_cbp6q"]
 [ext_resource type="Texture2D" uid="uid://cjugwatwqwhye" path="res://assets/PNG/2/throne room.png" id="19_26xuy"]
 [ext_resource type="Texture2D" uid="uid://c2glpnyibm2jb" path="res://assets/PNG/Battleground1/Bright/stones&grass.png" id="19_bc84e"]
+[ext_resource type="PackedScene" uid="uid://do2jqy4m8264f" path="res://Enemies/Bandit.tscn" id="19_cbp6q"]
 [ext_resource type="Texture2D" uid="uid://hmb6l73bcpcd" path="res://assets/PNG/Battleground1/Bright/Battleground1.png" id="20_26xuy"]
+[ext_resource type="PackedScene" uid="uid://1yyw1tasyeva" path="res://bob/blitz.tscn" id="20_bc84e"]
 [ext_resource type="Texture2D" uid="uid://0iexfcv3xk4y" path="res://assets/PNG/Battleground1/Pale/stones&grass.png" id="20_wukud"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cs4na"]
@@ -29,7 +28,7 @@ height = 657.5338
 size = Vector2(7524, 1667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8x4h"]
-size = Vector2(5075.5, 767)
+size = Vector2(5223.75, 1377)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8y0y"]
 size = Vector2(538, 942)
@@ -55,11 +54,6 @@ size = Vector2(5708, 3802.75)
 [node name="Map1" type="Node2D" unique_id=2000780242]
 y_sort_enabled = true
 position = Vector2(491, 235)
-
-[node name="Bob" parent="." unique_id=208910164 instance=ExtResource("2_fj7yv")]
-z_index = 3
-position = Vector2(131.99998, 513.99994)
-scale = Vector2(0.3, 0.3)
 
 [node name="Battleground2" type="Sprite2D" parent="." unique_id=1221633224]
 position = Vector2(966, 528)
@@ -171,7 +165,7 @@ z_index = 1
 position = Vector2(593, 1022)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1186848569]
-position = Vector2(2621, 155)
+position = Vector2(2546.875, 734.5)
 shape = SubResource("RectangleShape2D_b8x4h")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1283002066]
@@ -188,17 +182,10 @@ position = Vector2(-333, 4767)
 position = Vector2(3071, 178)
 shape = SubResource("RectangleShape2D_rxxjp")
 
-[node name="Door" parent="." unique_id=152332403 instance=ExtResource("11_ic0uy")]
-z_index = 1
-position = Vector2(5475, 563)
-
 [node name="GameUi" parent="." unique_id=58523734 instance=ExtResource("12_k3n1d")]
 
 [node name="DaggerPickup" parent="." unique_id=215256474 instance=ExtResource("14_70uel")]
 position = Vector2(-5337, 914)
-
-[node name="Enemy" parent="." unique_id=869605531 instance=ExtResource("16_2u3nc")]
-position = Vector2(611, 417)
 
 [node name="Battleground5" type="Sprite2D" parent="." unique_id=946957632]
 position = Vector2(-895, 521)
@@ -300,3 +287,10 @@ position = Vector2(1341, -986)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" unique_id=1581375152]
 position = Vector2(8841, 4223)
 shape = SubResource("RectangleShape2D_fyeu3")
+
+[node name="Blitz" parent="." unique_id=1853661991 instance=ExtResource("20_bc84e")]
+position = Vector2(-116, 881)
+script = null
+
+[node name="Bandit" parent="." unique_id=2137390447 instance=ExtResource("19_cbp6q")]
+position = Vector2(777, 723)

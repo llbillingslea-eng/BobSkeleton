@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1t00wxyq57pb"]
 
-[ext_resource type="PackedScene" uid="uid://ctb8n71p3vtsn" path="res://bob.tscn" id="1_u5ktm"]
+[ext_resource type="PackedScene" uid="uid://ctb8n71p3vtsn" path="res://bob/bob.tscn" id="1_u5ktm"]
 [ext_resource type="Texture2D" uid="uid://yeetpj61wk71" path="res://assets/PNG/Battleground4/Bright/back_trees.png" id="2_ia432"]
 [ext_resource type="Texture2D" uid="uid://dnhq2spngpvxg" path="res://assets/PNG/Battleground4/Bright/bones.png" id="3_hlada"]
 [ext_resource type="PackedScene" uid="uid://bbg5lt74jaek5" path="res://hammer_pickup.tscn" id="4_fu0tf"]

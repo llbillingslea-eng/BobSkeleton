@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://i4psgalbw22n"]
+
+[ext_resource type="Texture2D" uid="uid://b3tkcbe4l815p" path="res://assets/PNG/Objects_separately/Bones_shadow1_17.png" id="2_5e0u1"]
+[ext_resource type="Script" uid="uid://cfn6oo0ubwl7c" path="res://components/berry.gd" id="2_berry"]
+[ext_resource type="Script" uid="uid://s2jcr1411kwi" path="res://components/hitbox_component.gd" id="3_t8ar0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_berry"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8tonq"]
+
+[node name="Berry" type="Area2D" unique_id=1006539971]
+collision_layer = 0
+script = ExtResource("2_berry")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=623073303]
+texture = ExtResource("2_5e0u1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1117489004]
+shape = SubResource("CircleShape2D_berry")
+
+[node name="HitboxComponent" type="Area2D" parent="." unique_id=523934498]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("3_t8ar0")
+metadata/_custom_type_script = "uid://s2jcr1411kwi"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=504291145]
+shape = SubResource("CircleShape2D_8tonq")

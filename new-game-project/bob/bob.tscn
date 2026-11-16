@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ctb8n71p3vtsn"]
 
-[ext_resource type="Script" uid="uid://bnmt8v1i4fl2n" path="res://bob.gd" id="1_dcpys"]
+[ext_resource type="Script" uid="uid://44ro3612g3sh" path="res://bob/blitz.gd" id="1_r0206"]
 [ext_resource type="Texture2D" uid="uid://waameujfqc3f" path="res://assets/Reaper_Man_1/PNG/PNG Sequences/Idle/0_Reaper_Man_Idle_000.png" id="1_u7kh7"]
 [ext_resource type="Texture2D" uid="uid://dp6x7qbbe1e08" path="res://assets/Golem_3/PNG/PNG Sequences/Slashing/0_Golem_Slashing_000.png" id="2_kr207"]
 [ext_resource type="Texture2D" uid="uid://b1glijckmgaew" path="res://assets/Reaper_Man_1/PNG/PNG Sequences/Idle/0_Reaper_Man_Idle_001.png" id="2_nw4tb"]
@@ -61,6 +61,7 @@
 [ext_resource type="Texture2D" uid="uid://ynv8glo4cu3y" path="res://assets/Reaper_Man_1/PNG/PNG Sequences/Walking/0_Reaper_Man_Walking_021.png" id="41_lt8xh"]
 [ext_resource type="Texture2D" uid="uid://hvl2nb0v5rav" path="res://assets/Reaper_Man_1/PNG/PNG Sequences/Walking/0_Reaper_Man_Walking_022.png" id="42_qir2w"]
 [ext_resource type="Texture2D" uid="uid://cupdyqjlg8uub" path="res://assets/Reaper_Man_1/PNG/PNG Sequences/Walking/0_Reaper_Man_Walking_023.png" id="43_6r0t5"]
+[ext_resource type="Script" uid="uid://b32dksks8k2oo" path="res://hurt_box.gd" id="62_r0206"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cs4na"]
 animations = [{
@@ -276,7 +277,7 @@ height = 799.9999
 [node name="Bob" type="CharacterBody2D" unique_id=208910164]
 position = Vector2(136.99998, -29.999998)
 scale = Vector2(0.4, 0.4)
-script = ExtResource("1_dcpys")
+script = ExtResource("1_r0206")
 
 [node name="Hand" type="Marker2D" parent="." unique_id=1866209993]
 position = Vector2(-52.49997, 280)
@@ -302,6 +303,7 @@ shape = SubResource("CapsuleShape2D_rxxjp")
 [node name="HurtBox" type="Area2D" parent="." unique_id=16127066]
 position = Vector2(37.500034, 190)
 collision_layer = 2
+script = ExtResource("62_r0206")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1993612819]
 position = Vector2(-42.49996, -102.500015)

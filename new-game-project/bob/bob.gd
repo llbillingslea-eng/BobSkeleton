@@ -65,7 +65,7 @@ func _ready() -> void:
 	current_stamina = max_stamina
 	if hand:
 		default_hand_x = abs(hand.position.x)
-	equip_weapon("sword")
+	equip_weapon("dagger")
 	health_changed.emit(current_health, max_health)
 	stamina_changed.emit(current_stamina, max_stamina)
 
